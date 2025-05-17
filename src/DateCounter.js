@@ -3,35 +3,47 @@ import { useState } from "react";
 
 export default function DateCounter() {
 
+  /*******************************************************************************/
+
   const [count, setCount] = useState(0);
   const [step, setStep] = useState(1);
+
+  /*******************************************************************************/
 
   // This mutates the date object.
   const date = new Date("june 21 2027");
   date.setDate(date.getDate() + count);
 
-  const dec = function () {
+  /*******************************************************************************/
+
+  function dec() {
     // setCount((count) => count - 1);
     setCount((count) => count - step);
   };
 
-  const inc = function () {
+
+  function inc() {
     // setCount((count) => count + 1);
     setCount((count) => count + step);
   };
 
-  const defineCount = function (e) {
+
+  function defineCount(e) {
     setCount(Number(e.target.value));
   };
 
-  const defineStep = function (e) {
+
+  function defineStep(e) {
     setStep(Number(e.target.value));
   };
 
-  const reset = function () {
+
+  function reset() {
     setCount(0);
     setStep(1);
   };
+
+  /*******************************************************************************/
 
   return (
 
@@ -54,7 +66,9 @@ export default function DateCounter() {
       <div>
 
         <button onClick={dec}>-</button>
+
         <input value={count} onChange={defineCount} />
+
         <button onClick={inc}>+</button>
 
       </div>
