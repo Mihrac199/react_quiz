@@ -1,3 +1,10 @@
+export function Main({ children }) {
+
+     return <div className="main">{children}</div>;
+
+};
+
+
 export function Loader() {
 
      return (
