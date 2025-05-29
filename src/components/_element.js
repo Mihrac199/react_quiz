@@ -5,6 +5,13 @@ export function Main({ children }) {
 };
 
 
+export function Footer({ children }) {
+
+     return <footer>{children}</footer>;
+
+};
+
+
 export function Loader() {
 
      return (

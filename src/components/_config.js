@@ -1,0 +1,1 @@
+export const SECS_PER_QUESTİON = 30;
