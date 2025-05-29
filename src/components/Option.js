@@ -14,12 +14,13 @@ export default function Option({ question, dispatch, answer }) {
                                    ${hasAnswered ?
                                    (index === question.correctOption ? "correct" : "wrong")
                                    : ""}`}
-                         onClick={() => dispatch({ type: "newAnswer", payload: index })}
-                         disabled={hasAnswered}
-                         key={option}>{option}</button>
 
-               )
-               }
+                         onClick={() => dispatch({ type: "newAnswer", payload: index })}
+
+                         disabled={hasAnswered}
+
+                         key={option}>{option}</button>
+               )}
 
           </div >
 
