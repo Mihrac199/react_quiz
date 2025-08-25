@@ -1,5 +1,4 @@
-import Option from "./Option";
-
+import Option from "./Option"
 
 export default function Question({ question, dispatch, answer }) {
 

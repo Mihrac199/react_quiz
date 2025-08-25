@@ -1,19 +1,18 @@
-import { useEffect, useReducer } from "react";
-import Header from "./Header";
-import { Main, Loader, Error, Footer } from "./_element.js";
-import { SECS_PER_QUESTİON } from "./_config.js";
-import StartScreen from "./StartScreen.js";
-import Question from "./Question.js";
-import NextButton from "./NextButton.js";
-import Progress from "./Progress.js";
-import FinishScreen from "./FinishScreen.js";
-import Timer from "./Timer.js";
-
+import { useEffect, useReducer } from "react"
+import Header from "./Header"
+import { Main, Loader, Error, Footer } from "./_element.js"
+import { SECS_PER_QUESTİON } from "./_config.js"
+import StartScreen from "./StartScreen.js"
+import Question from "./Question.js"
+import NextButton from "./NextButton.js"
+import Progress from "./Progress.js"
+import FinishScreen from "./FinishScreen.js"
+import Timer from "./Timer.js"
 
 const initialState = {
 
      questions: [],
-     status: "loading", // "loading" , "error" , "ready" , "active" , "finished"
+     status: "loading",
      index: 0,
      answer: null,
      points: 0,
@@ -21,7 +20,6 @@ const initialState = {
      secondsRemaining: null,
 
 };
-
 
 function reducer(state, action) {
 
@@ -75,9 +73,7 @@ function reducer(state, action) {
 
 };
 
-
 export default function App() {
-
 
      const [{ questions, status, index, answer, points, highscore, secondsRemaining }, dispatch] = useReducer(reducer, initialState);
 
